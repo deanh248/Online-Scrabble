@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<title>WebScrabble</title>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Roboto::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+
+    <script type="text/javascript" src="js/phaser.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/board.js"></script>
+	<script type="text/javascript" src="js/tile.js"></script>
+	<script type="text/javascript" src="js/lobby.js"></script>
+	<script type="text/javascript" src="js/layout.js"></script>
+	<script type="text/javascript" src="js/preloader.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	
+	<script type="text/javascript" src="js/Packet.js"></script>
+	<script type="text/javascript" src="js/PacketHandler.js"></script>
+	<script type="text/javascript" src="js/Protocol.js"></script>
+	<script type="text/javascript" src="js/Network.js"></script>
+    <script type="text/javascript" src="js/alertify.js"></script>
+	<style>
+		html{margin:0;height:100%;}
+		body{margin:0;height:100%;background-color:#999;}
+		canvas { margin: 0 auto; }
+	</style>
+	<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="themes/alertify.core.css" />
+    <link rel="stylesheet" href="themes/alertify.default.css" />
+</head>
+
+<body>
+		<div style="display:none" id="loginUIOverlay">
+        
+			<div class="centerContainerOuter" style="width:433px;height:360px;">
+				
+                <div style="margin-left:80px;width:259px;height:76px;background-image:url('assets/logowhite.png');margin-bottom:20px;">
+                </div>
+
+                <div class="centerContainerInner loginbox">
+					<div class="loginboxbody">
+						<div id="txtErrorMessage" style="display:none" class="alert">
+							
+						</div>
+						<div id="txtInfoMessage" style="display:none" class="info">
+							
+						</div>
+						<div style="margin-bottom:10px">
+							<input placeholder="Your Name" class="loginboxinput" type="text" id="txtName"/>
+						</div>
+						<div style="position:relative">
+                            <div id="btnLogin" style="position:absolute;left:90px;width:185px;height:48px;background-image:url('assets/btnLogin.png');"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="display:none" id="chatUIOverlay">
+			<div class="centerContainerOuter" style="width:500px;height:300px;">
+				<div class="centerContainerInner chatbox">
+						<input class="chatboxinput" type="text" id="txtChat" placeholder="Chat: Press Enter to Send"/>
+				</div>
+			</div>
+		</div>
+		
+	<div id="gameDiv"> </div>	
+</body>  
+</html>  

@@ -1,0 +1,4 @@
+
+import Server
+
+Server.StartServer();
